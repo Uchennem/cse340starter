@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   align-self: center;
 }
 
-nav ul {
+nav ul, nav ul li a {
   display: flex;
   list-style: none;
   justify-content: space-evenly;
@@ -62,6 +62,7 @@ nav ul {
   height: 3rem;
   color: white;
   font-weight: bolder;
+  text-decoration: none;
   font-size: 1.2rem;
   padding: 5px;
 }
@@ -125,11 +126,22 @@ nav ul {
 .upg {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   background-color: rgba(0, 255, 187, 0.1); 
   border: 2px solid #6B0504;
   box-shadow: 2px 2px 5px #6B0504;
 }
 
+.upg img {
+  padding-top: 5%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.upg a {
+  text-align: center;
+
+}
 
 @media screen and (min-width: 768px) {
 
@@ -154,9 +166,9 @@ nav ul {
 
   #delo { 
     background-image: url('../images/vehicles/delorean.jpg'); 
-    background-size: 40vw auto;
+    background-size: 30vw auto;
     background-repeat: no-repeat; 
-    background-position: center;
+    background-position: 45% 50%;
     margin:10% auto ;
   }
   

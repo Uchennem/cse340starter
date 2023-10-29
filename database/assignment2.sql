@@ -34,7 +34,5 @@ WHERE cla.classification_name = 'Sport';
 
 /*6 */
 UPDATE public.inventory
-
-SET inv_image = CONCAT(SUBSTRING(inv_image, 1, POSITION('/' IN inv_image)), '/vehicles', SUBSTRING(inv_image, POSITION('/' IN inv_image) + 1)),
-
-    inv_thumbnail = CONCAT(SUBSTRING(inv_thumbnail, 1, POSITION('/' IN inv_thumbnail)), '/vehicles', SUBSTRING(inv_thumbnail, POSITION('/' IN inv_thumbnail) + 1));
+ 
+SET inv_image = REPLACE(inv_image, '/images/', '/images/vehicles/'),  inv_thumbnail = REPLACE(inv_thumbnail, '/images/', '/images/vehicles/')

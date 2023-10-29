@@ -497,6 +497,3 @@ VALUES   (
   );
 
 
-UPDATE public.inventory
-
-SET inv_image = REPLACE(inv_image, '//vehicles/vehiclesimages/vehicles/', '/images/vehicles/'),  inv_thumbnail = REPLACE(inv_thumbnail, '//vehicles/vehiclesimages/vehicles/', '/images/vehicles/');

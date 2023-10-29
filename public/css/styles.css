@@ -13,6 +13,10 @@ body {
   margin: 10%;
 }
 
+p {
+  color: black;
+}
+
 .content {
   margin: 0 auto;
   text-align: center;
@@ -143,6 +147,52 @@ nav ul, nav ul li a {
 
 }
 
+.car-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.car-grid li {
+  list-style-type: none; /* Remove the default list item marker (bullet point) */
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Add rounded borders */
+  padding: 10px;
+  display: flex; /* Center contents vertically and horizontally */
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center contents horizontally */
+}
+
+.car-grid img {
+  
+  height: auto;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.car-grid img a:hover,  #tools a:hover{
+  color: #6B0504;
+  opacity: .7;
+  transform: scale(1.5);
+}
+
+.namePrice {
+  margin-top: 10px;
+}
+
+
+.vehicle-content img {
+  width: 100%;
+}
+
+.error_background { 
+  background-image: url('../images/site/bg_error.webp'); 
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position: right;
+}
+
+
 @media screen and (min-width: 768px) {
 
   :root {
@@ -162,6 +212,12 @@ nav ul, nav ul li a {
 
 #welcome {
   margin-top: 5%;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
   #delo { 
@@ -196,4 +252,13 @@ nav ul, nav ul li a {
     padding-bottom: 25px;
   }
 
+  .vehicle-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
+

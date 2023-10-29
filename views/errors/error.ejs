@@ -1,0 +1,10 @@
+<% if (title) { %>
+  <div class="error_background">
+    
+    <h1><%= title %></h1>
+    <% } else {
+      res.redirect('/')
+    } %>
+
+  <p><%= message %></p>
+  </div>

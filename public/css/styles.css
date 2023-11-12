@@ -208,6 +208,82 @@ nav ul li :hover {
 }
 
 
+/******* form And Login styling
+
+***************/
+
+/* Styling the login title */
+.login-title {
+  font-size: 3em;
+  color: #5e5def; /* Adjust the color to match the form-box background */
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Add space below the title */
+}
+
+/* Styling the form box */
+.form-box {
+  display: grid;
+  grid-template-columns: 100%;
+  background-color: #f0f0f0; /* Lighter background color */
+  text-align: center; /* Center the form elements */
+  padding: 40px;
+  margin: auto;
+  max-width: 600px;
+  border-radius: 15px; /* Increase border radius for a softer look */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+/* Styling the form elements */
+.form-box div {
+  padding-top: 15px; /* Adjust spacing between elements */
+}
+
+.fname,
+.lname,
+.email,
+.password {
+  font-size: 1.4em; /* Increase font size for input labels */
+  padding: 15px 0; /* Adjust padding for input labels */
+}
+
+form input {
+  margin-top: 12px; /* Spacing between input fields */
+  font-size: 16px; /* Increase input field font size */
+  border: 1px solid #ccc; /* Add a light border */
+  padding: 10px; /* Adjust input field padding */
+}
+
+.form-btn {
+  background-color: #5e5def;
+  margin-top: 25px; /* Increase space between inputs and button */
+  padding: 10px 25px; /* Adjust button padding */
+  border: none;
+  font-size: 1.2rem; /* Increase button font size */
+  transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
+}
+
+.form-btn:hover {
+  background-color: #3b3be5; /* Darker color on hover */
+  color: white;
+}
+
+/* Styling the register section */
+.register {
+  padding-top: 30px; /* Adjust spacing */
+  font-size: 1.1em; /* Increase font size */
+  justify-content: center; /* Center align text */
+}
+
+.register a {
+  text-decoration: none; /* Remove underline */
+  color: #5e5def; /* Match color with form elements */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.register a:hover {
+  color: #3b3be5; /* Darker color on hover */
+}
+
 @media screen and (min-width: 768px) {
 
   :root {

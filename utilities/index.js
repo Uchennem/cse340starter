@@ -24,6 +24,23 @@ Util.getNav = async function (req, res, next) {
   return list
 }
 
+/* ************************
+ * Constructs the classification select
+ ************************** */
+Util.getClassifications = async function (selectedClassification, req, res, next) {
+  let data = await invModel.getClassifications();
+  let selectList = '<select name="classification_id" id="select_classification" class="select-classification">';
+  data.rows.forEach((row) => {
+    let selected = "";
+    if (selectedClassification == row.classification_id) {
+      selected = "selected";
+    }
+    selectList += `<option value="${row.classification_id}" ${selected}>${row.classification_name}</option>`;
+  });
+  selectList += '</select>';
+  return selectList;
+}
+
 /* **************************************
 * Build the classification view HTML
 * ************************************ */
@@ -32,7 +49,7 @@ Util.buildClassificationGrid = async function(data){
     if(data.length > 0){
       grid = '<ul id="inv-display" class="car-grid">'
       data.forEach(vehicle => { 
-        grid += '<li>'
+        grid += '<li class="car_img"> '
         grid +=  '<a href="../../inv/detail/'+ vehicle.inv_id 
         + '" title="View ' + vehicle.inv_make + ' '+ vehicle.inv_model 
         + 'details"><img src="' + vehicle.inv_thumbnail 

@@ -51,6 +51,8 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.5);
 }
 
+
+
 #tools {
   justify-self: end;
   font-weight: bolder;
@@ -69,6 +71,13 @@ nav ul, nav ul li a {
   text-decoration: none;
   font-size: 1.2rem;
   padding: 5px;
+}
+
+nav ul li :hover {
+  color:#00F5C0;
+  opacity: .7;
+  background-color: transparent;
+  transform: scale(1.5);
 }
 
 #welcome {
@@ -170,7 +179,13 @@ nav ul, nav ul li a {
   cursor: pointer;
 }
 
-.car-grid img a:hover,  #tools a:hover{
+.car_img a :hover {
+  transition: transform .5s;
+  opacity: .8;
+  transform: scale(1.1);
+}
+
+#tools a:hover{
   color: #6B0504;
   opacity: .7;
   transform: scale(1.5);
